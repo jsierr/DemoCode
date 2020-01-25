@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position Demo</title>
+    <style type="text/css">
+        .positionparent {
+            position: relative;
+            background-color: cyan;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+        .positiondemo {
+            position: fixed;
+            top: 20px;
+            left: 30px;
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            const para = document.getElementById("positionp");
+            window.onmousemove = (e) => {
+                para.style.top = `${e.clientY}px`;
+                para.style.left = `${e.clientX}px`;
+            };
+        };
+    </script>
+</head>
+<body>
+    <div class="positionparent">
+        <p id="positionp" class="positiondemo">WHERE AM I?</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chart demo</title>
+
+    <!-- Latest compiled and minified JQuery and Bootstrap libs -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Latest ChartJS; see documentation at www.chartjs.org -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    <!-- chart demo scripts -->
+    <script type="text/javascript" src="chartdemo.js"></script>
+    <script type="text/javascript" src="chartdemodata.js"></script>
+
+    <style>
+        /* This is just to make the canvas extent visible. */
+        #canvas1 {
+            border: 2px solid black;
+
+            /* Use these rules to position the canvas at a particular location on the page.       \
+             position: fixed;
+             top: 150px;
+             left: 50px;
+
+             Use caution with CSS specification of canvas width and height. If specified
+             here, the size will override any size specified in the <canvas> tag or
+             in js code. Best approach seems to be to specify it in the tag or code
+             and omit it from the css rules.
+             width: 800px;
+             height: 800px;
+             opacity: 1.0;
+             */
+        }
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <h3>Chart demo</h3>
+    <input id="redraw" type=button value="redraw" >
+    <canvas id="canvas1" width="500" height="500">No canvas support!</canvas>
+    <p id="msg">Here is some text.</p>
+</div>
+</body>
+</html>
